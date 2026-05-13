@@ -9,7 +9,8 @@ html {
 }
 
 body {
-    transition: smooth;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
 }
 
 :root {
@@ -30,20 +31,23 @@ a {
 
 /* header/ */
 header {
-    direction: flex;
+    display: flex;
     position: sticky;
     top: 0;
     background-color: var(--dark);
     z-index: 2;
-
+    width: 100%;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     height: 100px;
-    width: auto;
-
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .nav-left {
@@ -55,7 +59,7 @@ nav {
 }
 
 .logo {
-    border: 2px solid color#F5BC1E;
+    border: 2px solid #F5BC1E;
     width: 70px;
     height: 70px;
     border-radius: 100%;
@@ -119,22 +123,19 @@ nav {
 /* hero */
 
 .hero {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background: linear-gradient(135deg, #1a0a08 60%, #3a0e08 100%);
-    height: 75vh;
-    width: auto;
-    align-items: center;
-    gap: 200px;
     display: grid;
-    grid-template-columns: 400px 400px;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #1a0a08 60%, #3a0e08 100%);
+    padding: 40px 20px;
+    width: 100%;
 }
 
 .hero-left {
-    margin: 20px;
-    max-width: 400px;
+    margin: 20px 0;
+    max-width: 540px;
 }
 
 .hero-tag {
@@ -205,28 +206,26 @@ nav {
 }
 
 .hero-right {
-    height: auto;
-    width: auto;
     display: flex;
-
+    justify-content: center;
+    width: 100%;
 }
 
 .hero-dish-img-box {
-    width: 420px;
-    height: 320px;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 4 / 3;
     border: 1px solid var(--border);
     background: linear-gradient(145deg, #3a1208, #1a0a08);
     border-radius: 10%;
     display: flex;
     flex-direction: column;
     position: relative;
-
 }
 
-
 .hero-dish-img-box img {
-    height: 320px;
-    width: 420px;
+    width: 100%;
+    height: 100%;
     border-radius: 10%;
 
 
@@ -283,7 +282,6 @@ nav {
 }
 
 .offer-section {
-    height: 10vh;
     background-color: var(--dark);
     border-top: 2px solid var(--border);
     border-bottom: 2px solid var(--border);
@@ -293,6 +291,7 @@ nav {
     justify-content: space-around;
     color: var(--text-light);
     font-size: 20px;
+    padding: 20px 0;
 }
 
 .offer-section em {
@@ -318,11 +317,10 @@ nav {
     display: flex;
     flex-direction: column;
     background: var(--bg);
-    height: 100vh;
     width: auto;
     align-items: center;
     gap: 25px;
-
+    padding: 40px 0;
 }
 
 .title-line {
@@ -356,10 +354,11 @@ nav {
 
 .dishes-grid {
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px;
-    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .dishes-card {
@@ -512,12 +511,17 @@ nav {
     padding: 20px 10px 30px 20px;
 }
 
+
+/* .chefs-special// */
+
+
 .chefs-special {
     background-color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+   
 }
 
 .chefs-special-box {
@@ -585,4 +589,11 @@ nav {
     content: '✦';
     color: var(--gold);
     font-size: 0.6rem;
+}
+
+/* review// */
+
+.review {
+    background-color: var(--dark);
+    
 }
