@@ -4,12 +4,12 @@ const rightPanel = document.querySelector(".right");
 const header = document.querySelector(".header");
 
 
-rightPanel.addEventListener("scroll",() => {
-    if(rightPanel.scrollTop > 10) {
-    header.classList.add('header-scrolled');
-} else {
-    header.classList.remove('header-scrolled')
-}
+rightPanel.addEventListener("scroll", () => {
+    if (rightPanel.scrollTop > 10) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled')
+    }
 })
 
 
@@ -56,3 +56,44 @@ document.querySelectorAll('.songs-carousel').forEach(carousel => {
     row.addEventListener("scroll", updateBtn);
     updateBtn();
 });
+
+//song bars
+
+
+
+//play pause
+
+const playPauseBtn = document.querySelector(".player-play-btn");
+
+const playIcon = document.querySelector("#playIcon");
+
+const pauseIcon = document.querySelector("#pauseIcon");
+
+playPauseBtn.addEventListener("click", () => {
+    if (playIcon.classList.contains("display-none")) {
+        playIcon.classList.remove("display-none");
+        pauseIcon.classList.add("display-none");
+    } else {
+        playIcon.classList.add("display-none");
+        pauseIcon.classList.remove("display-none");
+    };
+});
+
+// muted unmute
+
+const muteUnmuteBtn = document.querySelector("#muteBtn")
+
+const muted = document.querySelector("#muted")
+
+const unMuted = document.querySelector("#un-muted")
+
+muteUnmuteBtn.addEventListener("click", () => {
+    if (unMuted.classList.contains("display-none")) {
+        unMuted.classList.remove("display-none");
+        muted.classList.add("display-none");
+    } else {
+        muted.classList.remove("display-none");
+        unMuted.classList.add("display-none");
+    };
+
+})

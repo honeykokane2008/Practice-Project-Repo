@@ -500,7 +500,7 @@
     background-color: rgb(75, 75, 75);
 }
 
-/* square image container fills card width */
+/* square image container  */
 .song-img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -515,7 +515,7 @@
     object-fit: cover;
 }
 
-/* green play button — hidden, slides up on hover */
+/* green play button */
 .card-play-btn {
     position: absolute;
     bottom: 8px;
@@ -619,7 +619,7 @@
 }
 
 
-/* ============ PLAYER BAR ============ */
+/* song BAR */
 
 .song-bar {
     position: fixed;
@@ -704,8 +704,24 @@
 .player-icon-btn img {
     height: 16px;
     width: 16px;
-    filter: brightness(0) invert(1); /* makes svg white */
+    filter: brightness(0) invert(1); 
 }
+
+
+#playIcon{
+   filter: brightness(0) ;
+
+}
+
+
+
+
+#pauseIcon{
+    filter: brightness(0);
+  
+}
+
+
 
 /* center — play controls + progress bar */
 .player-center {

@@ -656,7 +656,8 @@
                 <p class="player-song-artist">Honey Singh</p>
             </div>
             <button class="player-icon-btn">
-                <img src="svg-img/play.svg" alt="like">
+                <img src="svg-img/addTo.svg" alt="addTo">
+                
             </button>
         </div>
 
@@ -664,19 +665,20 @@
         <div class="player-center flex flex-column align-items-center gap">
             <div class="player-controls flex align-items-center gap">
                 <button class="player-icon-btn" title="Shuffle">
-                    <img src="svg-img/play.svg" alt="shuffle">
+                    <img src="svg-img/shuffle.svg" alt="shuffle">
                 </button>
                 <button class="player-icon-btn" title="Previous">
-                    <img src="svg-img/play.svg" alt="prev">
+                    <img src="svg-img/previous.svg" alt="prev">
                 </button>
                 <button class="player-play-btn" id="playBtn">
-                    <img src="svg-img/play.svg" alt="play/pause" id="playIcon">
+                    <img src="svg-img/play.svg" class="display-none" alt="play/pause" id="playIcon">
+                    <img src="svg-img/pause.svg" alt="play/pause" id="pauseIcon">
                 </button>
                 <button class="player-icon-btn" title="Next">
-                    <img src="svg-img/play.svg" alt="next">
+                    <img src="svg-img/next.svg" alt="next">
                 </button>
                 <button class="player-icon-btn" title="Repeat">
-                    <img src="svg-img/play.svg" alt="repeat">
+                    <img src="svg-img/repeat.svg" alt="repeat">
                 </button>
             </div>
             <!-- progress bar -->
@@ -692,13 +694,14 @@
         <!-- right: volume & extra -->
         <div class="player-right flex align-items-center gap">
             <button class="player-icon-btn" title="Queue">
-                <img src="svg-img/play.svg" alt="queue">
+                <img src="svg-img/queue.svg" alt="queue">
             </button>
             <button class="player-icon-btn" title="Devices">
-                <img src="svg-img/play.svg" alt="devices">
+                <img src="svg-img/lyrics.svg" alt="lyrics">
             </button>
-            <button class="player-icon-btn" title="Volume">
-                <img src="svg-img/play.svg" alt="volume">
+            <button class="player-icon-btn" title="Volume" id="muteBtn">
+                <img src="svg-img/speaker.svg" class="display-none" alt="volume" id="un-muted">
+                <img src="svg-img/muted-speaker.svg" alt="volume" id="muted">
             </button>
             <div class="volume-bar">
                 <div class="volume-fill" id="volumeFill" style="width: 70%"></div>
